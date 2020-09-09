@@ -31,7 +31,8 @@ spec:
       - name: acceptance-test
         type: pre-rollout
         url: http://flagger-loadtester.prod/
-        timeout: 30s
+        # timeout: 30s
+        timeout: 60s
         metadata:
           type: bash
           cmd: "curl -sd 'test' http://podinfo-canary.prod:9898/token | grep token"
