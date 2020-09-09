@@ -13,7 +13,8 @@ spec:
   service:
     port: 9898
   analysis:
-    interval: 10s
+    # interval: 10s
+    interval: 20s
     maxWeight: 100
     stepWeight: 5
     threshold: 5
