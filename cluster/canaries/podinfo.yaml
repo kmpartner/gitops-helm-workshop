@@ -28,14 +28,14 @@ spec:
           max: 500
         interval: 1m
     webhooks:
-      - name: acceptance-test
-        type: pre-rollout
-        url: http://flagger-loadtester.prod/
-        # timeout: 30s
-        timeout: 3m
-        metadata:
-          type: bash
-          cmd: "curl -sd 'test' http://podinfo-canary.prod:9898/token | grep token"
+      # - name: acceptance-test
+      #   type: pre-rollout
+      #   url: http://flagger-loadtester.prod/
+      #   # timeout: 30s
+      #   timeout: 3m
+      #   metadata:
+      #     type: bash
+      #     cmd: "curl -sd 'test' http://podinfo-canary.prod:9898/token | grep token"
       - name: "helm test"
         type: pre-rollout
         url: http://helm-tester.prod/
