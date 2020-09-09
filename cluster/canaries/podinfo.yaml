@@ -32,14 +32,15 @@ spec:
         type: pre-rollout
         url: http://flagger-loadtester.prod/
         # timeout: 30s
-        timeout: 2m
+        timeout: 3m
         metadata:
           type: bash
           cmd: "curl -sd 'test' http://podinfo-canary.prod:9898/token | grep token"
       - name: "helm test"
         type: pre-rollout
         url: http://helm-tester.prod/
-        timeout: 2m
+        # timeout: 2m
+        timeout: 3m
         metadata:
           type: "helmv3"
           cmd: "test podinfo"
