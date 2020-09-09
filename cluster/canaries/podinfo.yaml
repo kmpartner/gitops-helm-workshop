@@ -36,14 +36,14 @@ spec:
       #   metadata:
       #     type: bash
       #     cmd: "curl -sd 'test' http://podinfo-canary.prod:9898/token | grep token"
-      - name: "helm test"
-        type: pre-rollout
-        url: http://helm-tester.prod/
-        # timeout: 2m
-        timeout: 3m
-        metadata:
-          type: "helmv3"
-          cmd: "test podinfo"
+      # - name: "helm test"
+      #   type: pre-rollout
+      #   url: http://helm-tester.prod/
+      #   # timeout: 2m
+      #   timeout: 3m
+      #   metadata:
+      #     type: "helmv3"
+      #     cmd: "test podinfo"
       # - name: load-test
       #   type: rollout
       #   url: http://flagger-loadtester.prod/
