@@ -32,7 +32,7 @@ spec:
     webhooks:
       - name: acceptance-test
         type: pre-rollout
-        url: http://flagger-loadtester.prod/
+        url: http://loadtester.prod/
         # timeout: 30s
         timeout: 3m
         metadata:
@@ -47,7 +47,7 @@ spec:
           cmd: "test podinfo"
       - name: load-test
         type: rollout
-        url: http://flagger-loadtester.prod/
+        url: http://loadtester.prod/
         metadata:
           cmd: "hey -z 2m -q 10 -c 2 http://podinfo-canary.prod:9898/"
 
