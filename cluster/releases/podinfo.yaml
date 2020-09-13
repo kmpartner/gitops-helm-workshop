@@ -11,14 +11,24 @@ metadata:
 spec:
   releaseName: podinfo
   chart:
-    git: git@github.com:kmpartner/gitops-helm-workshop
+    # git: git@github.com:kmpartner/gitops-helm-workshop
+    # ref: master
+    # path: cluster/charts/podinfo
+
+    git: git@github.com:kmpartner/buildachart
     ref: master
-    path: cluster/charts/podinfo
+    path: /
+
   values:
     image:
-      repository: stefanprodan/podinfo
-      tag: 3.1.5
+      # repository: stefanprodan/podinfo
+      # tag: 3.1.5
+      # # tag: 3.1.0
+
+      repository: kmpartner/ol-tutorial-webgl
+      tag: latest
       # tag: 3.1.0
+      
     service:
       enabled: false
       type: ClusterIP
